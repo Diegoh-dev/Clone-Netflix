@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import categories from "./Api";
+import "./App.css";
+import Row from "./componets/Row";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* Navbar |  destaque | em alta | filmes de cada categoria*/}
+      {categories.map((category) => {
+        return (
+          <Row
+            key={category.name}
+            title={category.title}
+            path={category.path}
+            isLarge={category.isLarge}
+          />
+        );
+      })}
     </div>
   );
 }
