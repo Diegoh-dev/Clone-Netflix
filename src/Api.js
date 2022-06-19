@@ -29,7 +29,7 @@ const categories = [
   {
     name: "romances",
     title: "Romances",
-    path: `/discover/tv?api_key=${API_KEY}&with_genres=1074`,
+    path: `/discover/tv?api_key=${API_KEY}&with_genres=10749`,
     isLarge: false,
   },
   {
